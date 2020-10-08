@@ -1,0 +1,4 @@
+Jinja2
+SQLAlchemy==1.2.19
+Flask
+gunicorn
