@@ -1,0 +1,23 @@
+<DOCTYPE html> 
+  <html> 
+    <head> 
+      <title> {% block title%} {% endblock %}</title>
+      {% include 'partials/header.html'%}
+      <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/_base.css')}}">
+    </head>
+    <body style="margin:0%;">
+      <div class="group"> 
+        <div class= "left-tab">
+        <ul style= "color:white;">
+          <li><a class="link" type="button" href="">Doenças</a></li>
+          <li><a class="link" type="button" href="">Consultar Sintomas</a></li>
+          <li><a class="link" type="button" href="">Doenças</a></li>
+        </ul>
+        </div>
+        <div class= "container"> 
+          {% block body%} {% endblock%} 
+        </div>
+      </div>
+    </body> 
+</html>

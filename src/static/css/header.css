@@ -1,0 +1,20 @@
+.tabhead{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(41, 41, 41);
+}
+.divtitle{
+    padding: 2%;
+
+}
+#title{
+    color:white;
+    text-decoration: solid;
+    font-size: 18;
+    font-kerning: initial;
+    border: ridge;
+    padding: 4px;
+    font-family: Helvetica ,Arial, sans-serif;
+}

@@ -1,0 +1,35 @@
+.left-tab{
+    display: inline;
+    border-style: groove;
+    background-color: gray;
+    height: 100%;
+    width: 150px;
+    position: relative;
+    border-width:2px;
+    left:0px;
+    float: left;
+    
+}
+.container{
+        position:relative;
+        border-width:2px;
+        width:85%;
+        height: 100%;
+        float: left;
+}
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+.link{
+    color: white;
+    text-decoration: double;
+    font-size: smaller  ;
+}

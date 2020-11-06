@@ -1,0 +1,16 @@
+.tabfooter{
+    display: flex;
+    margin: 0;
+    background-color: rgb(150, 150, 150);
+    position: absolute;
+    top: auto;
+    height: 50px;
+    line-height: 35px;
+    text-align: center;
+    width: 100%;
+        
+}
+.div{
+    padding: 2%;
+
+}

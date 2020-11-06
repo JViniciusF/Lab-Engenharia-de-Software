@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% block title%} Home {% endblock%}
+{% block body%}
+<div class = "row">  
+        {{form.doenca.label}}
+        {{form.doenca}}
+        <button class="teste" onclick="consultarSintomas()">Buscar</button>
+</div> 
+<script>
+function consultarSintomas(){
+    console.log($("#doenca").val())
+}
+</script>
+{% endblock %}
