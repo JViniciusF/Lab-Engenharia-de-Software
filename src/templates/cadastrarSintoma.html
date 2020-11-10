@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% block title%} Home {% endblock%}
+{% block body%}
+<div class = "row">
+    <div class = "row-head title-2">
+    Cadastrar Doença
+    </div>
+    <div class = "row-content" id = "form-header">
+        <form action="/cadastrar/sintoma" method="post">
+        {{ form.csrf_token }}
+            <div class= "label">
+                {{form.doenca.label}}
+                {{form.doenca}}
+            </div>
+            <div class= "label">
+                {{form.sintoma.label}}
+                {{form.sintoma}}
+            </div>
+            <button class="button-srch">Cadastrar</button>
+        </form>
+        </div>
+    </div>
+</div> 
+
+{% endblock %}

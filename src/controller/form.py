@@ -5,9 +5,11 @@ from src.model.doenca import Doenca
 from src.model.dadosEpd import DadoEpidemiologico
 
 class doencaForm(FlaskForm):
-    doenca = SelectField('doenca',choices = [])
+    doenca = SelectField('Doenca :',choices = [])
 
-# class dadosepdform(FlaskForm):
-#     class Meta:
-#         model = DadoEpidemiologico
+class criardoenca(FlaskForm):
+    doenca= StringField("Nome da Doenca : ",[validators.required(), validators.length(max=30)])
     
+class cadastrarSintoma(FlaskForm):
+    doenca = SelectField('Doenca :',choices = [])
+    sintoma= StringField("Sintoma : ",[validators.required(), validators.length(max=50)])

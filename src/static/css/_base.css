@@ -1,7 +1,8 @@
 .left-tab{
     display: inline;
-    border-style: groove;
-    background-color: gray;
+    border-style: ridge;
+    border-color: white;
+    background-color:rgb(41, 41, 41);
     height: 100%;
     width: 150px;
     position: relative;
@@ -32,4 +33,40 @@
     color: white;
     text-decoration: double;
     font-size: smaller  ;
+}
+.label{
+    width: 200px;
+    display:inline-grid;
+}
+.row{
+    margin: 3%;
+    height:-webkit-fill-available;
+}
+.row-content{
+    border:solid;
+    border-color: black;
+    border-width: thin;
+    height:-webkit-fill-available;
+    padding: 3%;
+}
+.row-head{
+    border:solid;
+    border-color: black;
+    border-width: thin;
+    margin-bottom: 3px;
+    
+    
+}
+.button-srch{
+    margin-top: 2%;
+    margin-left: 1%;
+    position: absolute;
+    height: 18.8px;
+}
+
+.conteudo{
+    margin-top: 3%;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
 }

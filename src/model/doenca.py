@@ -15,10 +15,11 @@ class Doenca(Base):
 class Sintomas(Base):
     __tablename__ = 'sintomas'
     id = Column(Integer,primary_key= True)
-    nome = Column(String(50),unique=True)
     descricao = Column(String(100))
     doenca_id = Column(Integer,ForeignKey('doenca.id'))
-    def __init__(self, nome=None):
-        self.nome = nome
+    def __init__(self, descricao=None,doenca_id = None):
+        self.descricao = descricao
+        self.doenca_id = doenca_id
+
     def __repr__(self):
-        return '<Sintomas %r>' % (self.nome)
+        return '<Sintomas %r>' % (self.descricao)

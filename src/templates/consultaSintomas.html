@@ -1,14 +1,46 @@
 {% extends '_base.html' %}
 {% block title%} Home {% endblock%}
 {% block body%}
-<div class = "row">  
-        {{form.doenca.label}}
-        {{form.doenca}}
-        <button class="teste" onclick="consultarSintomas()">Buscar</button>
+<div class = "row">
+    <div class = "row-head title-2">
+    Consulta de Sintomas
+    </div>
+    <div class = "row-content" id = "form-header">
+        <div class= "label">
+            {{form.doenca.label}}
+            {{form.doenca}}
+        </div>
+        <button class="button-srch" onclick="consultarSintomas()">Buscar</button>
+        <div class="conteudo" id = "conteudoAjax"hidden>
+        
+        </div>
+    </div>
 </div> 
 <script>
 function consultarSintomas(){
-    console.log($("#doenca").val())
+    let doenca = $("#doenca").val()
+    $.ajax({
+        url :"/consulta/ajaxSintomas",
+        data :{
+            'doenca':doenca
+        },
+        type: 'GET',
+        success: function(response){
+                
+				let str = response
+                lista = str.replaceAll("[","")
+                lista = lista.replaceAll("]","")
+                lista=lista.split(",")
+                for (x=0;x<lista.length;x++){
+                    var sintoma = document.createElement("div");
+                    sintoma.classList.add("title-3") 
+                    sintoma.innerHTML = '<li>'+lista[x]+'</li>'
+                    $("#conteudoAjax").append(sintoma)
+                    $("#conteudoAjax").removeAttr("hidden")
+                }
+            
+			}
+    })
 }
 </script>
 {% endblock %}
