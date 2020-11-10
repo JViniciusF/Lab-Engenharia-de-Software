@@ -2,10 +2,15 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+import os
+from  dotenv  import  load_dotenv ,  find_dotenv 
+load_dotenv( find_dotenv ())
 
-
-
-engine = create_engine('mysql://root:25845@localhost/coronapp', convert_unicode=True)
+user = os.getenv("USER")
+password = os.getenv("PASSWORD")
+endereco = os.getenv("ENDERECO")
+table = os.getenv("TABLE")
+engine = create_engine('mysql://'+user+':'+password+'@'+endereco+'/'+table, convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
